@@ -1,9 +1,9 @@
 {{/* This file is combined with the root.tmpl to display the blog home page. */}}
 
-{{define "title"}}The Go Programming Language Blog{{end}}
+{{define "title"}}我的博客{{end}}
 {{define "content"}}
 	{{range .Data}}
 		{{template "doc" .}}
 	{{end}}
-	<p>See the <a href="{{.BasePath}}/index">index</a> for more articles.
+	<p>See the <a href="{{.BasePath}}/index">索引</a> for more articles.
 {{end}}

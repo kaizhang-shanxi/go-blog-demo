@@ -1,0 +1,22 @@
+appname: kai-blog
+prepare:
+  version: 0.0.1
+  script:
+    - echo "prepare"
+build:
+  base: registry.yxapp.xyz/centos-golang:go1.6.2
+  script:
+    - go build
+release:
+  dest_base: registry.yxapp.xyz/centos:1.0.1
+  copy:
+    - src: /lain/app/entry.sh
+      dest: /lain/app/entry.sh
+    - src: /lain/app/blog
+      dest: /lain/app/blog
+proc.blog-watcher:
+  type: worker
+  num_instances: 1
+  cmd: /lain/app/entry.sh
+  logs:
+    - monitor.log
