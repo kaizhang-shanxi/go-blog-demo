@@ -26,5 +26,6 @@ release:
 web:
   num_instances: 1
   cmd: /lain/app/entry.sh
+  port: 8080
   logs:
     - monitor.log
