@@ -40,7 +40,8 @@ func main() {
 	}
 	fs := http.FileServer(http.Dir(*staticPath))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
-	log.Fatal(http.ListenAndServe(*httpAddr, nil))
+	// log.Fatal(http.ListenAndServe(*httpAddr, nil))
+  log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 // reloadingBlogServer is an handler that restarts the blog server on each page
