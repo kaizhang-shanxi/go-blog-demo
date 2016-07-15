@@ -17,7 +17,8 @@ import (
 	_ "golang.org/x/tools/playground"
 )
 
-const hostname = "127.0.0.1" // default hostname for blog server
+// const hostname = "127.0.0.1" // default hostname for blog server
+const hostname = "0.0.0.0" // default hostname for blog server
 
 var config = blog.Config{
 	Hostname:     hostname,
