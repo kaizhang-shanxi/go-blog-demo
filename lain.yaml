@@ -17,6 +17,12 @@ release:
       dest: /lain/app/entry.sh
     - src: /lain/app/blog/blog
       dest: /lain/app/blog/blog
+    - src: /lain/app/content
+      dest: /lain/app/content
+    - src: /lain/app/static
+      dest: /lain/app/static
+    - src: /lain/app/template
+      dest: /lain/app/template
 proc.blog-watcher:
   type: worker
   num_instances: 1
