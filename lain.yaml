@@ -1,19 +1,22 @@
 appname: kai-blog
-prepare:
-  version: 0.0.1
-  script:
-    - echo "prepare"
 build:
   base: registry.yxapp.xyz/centos-golang:go1.6.2
+  prepare:
+    version: 1
+    script:
+      - echo "prepare"
+      - go get golang.org/x/tools/blog
+      - go get golang.org/x/tools/godoc/static
+      - go get golang.org/x/tools/playground
   script:
-    - go build
+    - cd blog && go build
 release:
   dest_base: registry.yxapp.xyz/centos:1.0.1
   copy:
     - src: /lain/app/entry.sh
       dest: /lain/app/entry.sh
-    - src: /lain/app/blog
-      dest: /lain/app/blog
+    - src: /lain/app/blog/blog
+      dest: /lain/app/blog/blog
 proc.blog-watcher:
   type: worker
   num_instances: 1
