@@ -23,8 +23,7 @@ release:
       dest: /lain/app/static
     - src: /lain/app/template
       dest: /lain/app/template
-proc.blog-watcher:
-  type: worker
+web:
   num_instances: 1
   cmd: /lain/app/entry.sh
   logs:
