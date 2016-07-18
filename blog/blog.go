@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"strings"
 	"time"
+  "log"
 
 	"golang.org/x/tools/blog"
 	"golang.org/x/tools/godoc/static"
@@ -17,8 +18,7 @@ import (
 	_ "golang.org/x/tools/playground"
 )
 
-// const hostname = "127.0.0.1" // default hostname for blog server
-const hostname = "0.0.0.0" // default hostname for blog server
+const hostname = "kai-blog.lain.local" // default hostname for blog server
 
 var config = blog.Config{
 	Hostname:     hostname,
@@ -27,7 +27,7 @@ var config = blog.Config{
 	HomeArticles: 5,  // articles to display on the home page
 	FeedArticles: 10, // articles to include in Atom and JSON feeds
 	PlayEnabled:  true,
-	FeedTitle:    "我的博客",
+	FeedTitle:    "张凯的博客",
 }
 
 func init() {
@@ -44,7 +44,10 @@ func init() {
 
 func staticHandler(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Path
+  log.Println("r.URL:", r.URL)
+  log.Println("name:", name)
 	b, ok := static.Files[name]
+  log.Println("ok:", ok)
 	if !ok {
 		http.NotFound(w, r)
 		return
