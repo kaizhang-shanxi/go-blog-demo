@@ -30,8 +30,8 @@ web:
   # cmd: /lain/app/blog/blog -http=:8080
   # cmd: []
   # cmd: ["/lain/app/blog/blog"]
-  cmd: ["/lain/app/blog/blog", "-http=:8080"]
-  # cmd: ["/lain/app/blog/blog", "-http", ":8080"]
+  # cmd: ["/lain/app/blog/blog", "-http=:8080"]
+  cmd: ["/lain/app/blog/blog", "-http", ":8080"]
   # cmd: ["/lain/app/blog/blog", "-http", 8080]
   port: 8080
   logs:
