@@ -26,9 +26,9 @@ web:
   # 不写 cmd -> None
   # cmd:    # 空格 -> None
   # cmd: 1
-  # cmd: /lain/app/blog/blog
+  cmd: /lain/app/blog/blog
   # cmd: /lain/app/blog/blog -http=:8080
-  cmd: []
+  # cmd: []
   # cmd: ["/lain/app/blog/blog"]
   # cmd: ["/lain/app/blog/blog", "-http=:8080"]
   # cmd: ["/lain/app/blog/blog", "-http", ":8080"]
