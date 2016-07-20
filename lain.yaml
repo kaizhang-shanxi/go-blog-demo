@@ -23,8 +23,8 @@ release:
       dest: /lain/app/template
 web:
   num_instances: 1
-  # 不写 cmd
-  # cmd:    # 空格
+  # 不写 cmd -> None
+  cmd:    # 空格
   # cmd: /lain/app/blog/blog
   # cmd: /lain/app/blog/blog -http=:8080
   # cmd: []
