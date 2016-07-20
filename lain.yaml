@@ -13,8 +13,6 @@ build:
 release:
   dest_base: registry.yxapp.xyz/centos:1.0.1
   copy:
-    - src: /lain/app/entry.sh
-      dest: /lain/app/entry.sh
     - src: /lain/app/blog/blog
       dest: /lain/app/blog/blog
     - src: /lain/app/content
@@ -25,7 +23,7 @@ release:
       dest: /lain/app/template
 web:
   num_instances: 1
-  cmd: /lain/app/entry.sh
+  cmd: /lain/app/blog/blog
   port: 8080
   logs:
     - monitor.log
