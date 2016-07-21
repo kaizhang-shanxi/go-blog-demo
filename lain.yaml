@@ -4,7 +4,7 @@ build:
   script:
     - echo "building..."
 release:
-  dest_base: registry.yxapp.xyz/centos:1.0.1
+  dest_base: kaizhang91/go-blog-on-docker
   copy:
     - src: /lain/app/lain.yaml
       dest: /lain/app/lain.yaml
