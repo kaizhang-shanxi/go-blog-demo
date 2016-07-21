@@ -1,13 +1,20 @@
 appname: go-blog-on-lain
+
 build:
   base: kaizhang91/go-blog-on-docker
+  prepare:
+    version: 0
+    script:
+      - echo "preparing..."
   script:
     - echo "building..."
+
 release:
   dest_base: kaizhang91/go-blog-on-docker
   copy:
     - src: /lain/app/README.md
       dest: /lain/app/README.md
+
 web:
   num_instances: 1
   # 不写 cmd -> None
