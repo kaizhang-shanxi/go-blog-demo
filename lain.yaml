@@ -1,4 +1,4 @@
-appname: kai-blog
+appname: go-blog-on-lain
 build:
   base: kaizhang91/go-blog-on-docker
   script:
@@ -7,7 +7,7 @@ release:
   dest_base: registry.yxapp.xyz/centos:1.0.1
   copy:
     - src: /lain/app/lain.yaml
-    - dest: /lain/app/lain.yaml
+      dest: /lain/app/lain.yaml
 web:
   num_instances: 1
   # 不写 cmd -> None
