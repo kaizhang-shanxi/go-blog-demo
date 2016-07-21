@@ -1,20 +1,26 @@
-appname: go-blog-on-lain
-
+appname: kai-blog
 build:
-  base: kaizhang91/go-blog-on-docker
+  base: registry.yxapp.xyz/centos-golang:go1.6.2
   prepare:
-    version: 0
+    version: 1
     script:
-      - echo "preparing..."
+      - echo "prepare"
+      - go get golang.org/x/tools/blog
+      - go get golang.org/x/tools/godoc/static
+      - go get golang.org/x/tools/playground
   script:
-    - echo "building..."
-
+    - cd blog && go build
 release:
-  dest_base: kaizhang91/go-blog-on-docker
+  dest_base: registry.yxapp.xyz/centos:1.0.1
   copy:
-    - src: /lain/app/README.md
-      dest: /lain/app/README.md
-
+    - src: /lain/app/blog/blog
+      dest: /lain/app/blog/blog
+    - src: /lain/app/content
+      dest: /lain/app/content
+    - src: /lain/app/static
+      dest: /lain/app/static
+    - src: /lain/app/template
+      dest: /lain/app/template
 web:
   num_instances: 1
   # 不写 cmd -> None
@@ -24,7 +30,7 @@ web:
   # cmd: /lain/app/blog/blog -http=:8080
   # cmd: []
   # cmd: ["/lain/app/blog/blog"]
-  # cmd: ["-http=:8080"]
+  cmd: ["/lain/app/blog/blog", "-http=:8080"]
   # cmd: ["/lain/app/blog/blog", "-http", ":8080"]
   # cmd: ["/lain/app/blog/blog", "-http", 8080]
   # cmd: ["/lain/app/blog/blog",     "-http=:8080"]
