@@ -6,8 +6,8 @@ build:
 release:
   dest_base: kaizhang91/go-blog-on-docker
   copy:
-    - src: /lain/app/lain.yaml
-      dest: /lain/app/lain.yaml
+    - src: /lain/app/README.md
+      dest: /lain/app/README.md
 web:
   num_instances: 1
   # 不写 cmd -> None
