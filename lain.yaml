@@ -1,17 +1,15 @@
 appname: go-blog-on-lain
 
 build:
-  # base: registry.yxapp.xyz/centos-golang:go1.6.2
   base: kaizhang91/go-blog-on-docker
   prepare:
-    version: 1
+    version: 3
     script:
       - echo "preparing..."
   script:
     - echo "building..."
 
 web:
-  image: kaizhang91/go-blog-on-docker
   # 不写 cmd -> None
   # cmd:    # 空格 -> None
   # cmd: 1
