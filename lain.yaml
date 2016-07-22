@@ -16,7 +16,7 @@ web:
   # cmd: /lain/app/blog/blog
   # cmd: /lain/app/blog/blog -http=:8080
   # cmd: []
-  cmd: ["-http=:8080"]
+  # cmd: ["-http=:8080"]
   # cmd: ["/lain/app/blog/blog", "-http", ":8080"]
   # cmd: ["/lain/app/blog/blog", "-http", 8080]
   # cmd: ["/lain/app/blog/blog",     "-http=:8080"]
