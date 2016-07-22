@@ -13,7 +13,7 @@ web:
   # 不写 cmd -> None
   # cmd:    # 空格 -> None
   # cmd: 1
-  # cmd: /lain/app/blog/blog
+  cmd: blog
   # cmd: /lain/app/blog/blog -http=:8080
   # cmd: []
   # cmd: ["-http=:8080"]
