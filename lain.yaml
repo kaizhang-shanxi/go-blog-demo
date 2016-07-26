@@ -11,12 +11,12 @@ build:
 
 web:
   # entrypoint: blog
-  entrypoint: blog -http=:8080
-  cmd: -content=content/
-  # entrypoint: blog -http=:8080 -content=content/
+  # entrypoint: blog -http=:8080
+  entrypoint: blog -http=:8080 -content=content/
   # entrypoint: ["blog"]
   # entrypoint: ["blog", "-http=:8080"]
   # entrypoint: ["blog", "-http=:8080", "-content=content/"]
+  cmd: -template=template/
   # 不写 cmd -> None
   # cmd:    # 空格 -> None
   # cmd: 1
