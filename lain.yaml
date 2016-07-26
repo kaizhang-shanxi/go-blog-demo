@@ -12,7 +12,7 @@ build:
 web:
   entrypoint: blog
   # 不写 cmd -> None
-  # cmd:    # 空格 -> None
+  cmd:    # 空格 -> None
   # cmd: 1
   # cmd: blog
   # cmd: /lain/app/blog/blog -http=:8080
