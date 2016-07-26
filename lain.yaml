@@ -14,14 +14,11 @@ web:
   # 不写 cmd -> None
   # cmd:    # 空格 -> None
   # cmd: 1
-  cmd: -http=:8080
+  # cmd: -http=:8080
   # cmd: -http=:8080 -content=content/
-  # cmd: []
+  cmd: []
   # cmd: ["-http=:8080"]
-  # cmd: ["/lain/app/blog/blog", "-http", ":8080"]
-  # cmd: ["/lain/app/blog/blog", "-http", 8080]
-  # cmd: ["/lain/app/blog/blog",     "-http=:8080"]
-  # cmd: /lain/app/blog/blog       -http=:8080
+  # cmd: ["-http=:8080", "content=content/]
   port: 8080
   logs:
     - monitor.log
