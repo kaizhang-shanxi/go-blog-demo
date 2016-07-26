@@ -10,6 +10,7 @@ build:
     - echo "building..."
 
 web:
+  entrypoint: blog
   # 不写 cmd -> None
   # cmd:    # 空格 -> None
   # cmd: 1
