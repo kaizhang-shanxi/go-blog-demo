@@ -12,8 +12,8 @@ build:
 web:
   entrypoint: blog
   # 不写 cmd -> None
-  # cmd:    # 空格 -> None
-  cmd: 1
+  cmd:    # 空格 -> None
+  # cmd: 1
   # cmd: -http=:8080
   # cmd: -http=:8080 -content=content/
   # cmd: []
