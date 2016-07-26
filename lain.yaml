@@ -14,8 +14,8 @@ web:
   # 不写 cmd -> None
   # cmd:    # 空格 -> None
   # cmd: 1
-  # cmd: -http=:8080
-  cmd: -http=:8080 -content=content/
+  cmd: -http=:8080
+  # cmd: -http=:8080 -content=content/
   # cmd: []
   # cmd: ["-http=:8080"]
   # cmd: ["-http=:8080", "content=content/"]
