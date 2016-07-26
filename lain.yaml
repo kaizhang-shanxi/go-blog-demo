@@ -17,8 +17,8 @@ web:
   # cmd: -http=:8080
   # cmd: -http=:8080 -content=content/
   # cmd: []
-  # cmd: ["-http=:8080"]
-  cmd: ["-http=:8080", "content=content/"]
+  cmd: ["-http=:8080"]
+  # cmd: ["-http=:8080", "content=content/"]
   port: 8080
   logs:
     - monitor.log
