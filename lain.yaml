@@ -1,4 +1,4 @@
-appname: kai-blog
+appname: go-blog-on-lain
 build:
   base: registry.yxapp.xyz/centos-golang:go1.6.2
   prepare:
