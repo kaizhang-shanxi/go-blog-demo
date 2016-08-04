@@ -3,7 +3,7 @@ appname: go-blog-on-lain
 build:
   base: kaizhang91/go-blog-on-docker
   prepare:
-    version: 4
+    version: 5
     script:
       - echo "preparing..."
   script:
